@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Applicaiton</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href=
+"https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  </head>
+  <body>
+     
+     <div>
+      
+     </div>
+    <div class="body">
+      <div class="container">
+        <div>
+          <h1>Weather Application</h1>
+        </div>
+        <div class="input">
+          <input type="text" placeholder="Enter-city" id="city-input" />
+          <button onclick="getWeatherData()">Get Weather</button>
+        </div>
+        <div class="weather-data">
+          <p><strong>City: </strong> <span id="city-span"></span></p>
+          <p><strong>Date: </strong> <span id="date-span"></span></p>
+          <p><strong>Tempreture: </strong><span id="tempreture-span"></span></p>
+        </div>
+        <div>
+          <!-- <img src="sun.png" alt="" /> -->
+        </div>
+        <div class="time-zone">
+          <p><strong>Time-zone: </strong><span id="time-zone"></span></p>
+          <p><strong>Latitude: </strong><span id="latitude"></span></p>
+          <p><strong>Longtitude: </strong><span id="gratitude"></span></p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

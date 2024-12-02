@@ -1,0 +1,174 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    /* height: 100vh; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    font-family: 'Montserrat', sans-serif;
+    /* background: linear-gradient(120deg, #89f7fe, #66a6ff);
+     */
+     background-image: url(realistic-weather-widget_1284-4092.avif);
+     background-position: center;
+     position: relative;
+    /* background-size: 300% 300%; */
+    animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.body{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* height: 50%; */
+    /* width: 50%; */
+}
+h1{
+    text-align: center;
+    /* background-color: black; */
+    /* color: white; */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 2rem;
+    /* margin-bottom: 40px; */
+    color: #101611;
+    /* background-color: rgba(226, 32, 32, 0.888); */
+}
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: min(60vh, 600px); /* Fluid height */
+    width: min(30vw, 500px);  /* Fluid width */
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.289);
+    margin-top: 10%;
+    /* opacity: 0.6; */
+    /* opacity: 0.9    ; */
+    /* filter: blur(1px); */
+    /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
+  backdrop-filter: blur(8px);
+  /* min-width: 250wh; */
+
+    
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+}
+
+.input{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
+.input input {
+    height: 40px;
+    width: 240px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 8px;
+    font-size: large;
+    font-weight: 800;
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    transition: border 0.3s;
+}
+
+.input input:focus {
+    border: 2px solid #2196F3;
+    outline: none;
+}
+
+.input button{
+    padding: 10px;
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: fit-content;
+    /* margin-left: 60px; */
+    font-family: 'Montserrat', sans-serif;
+}
+.weather-data{
+    background-color: antiquewhite; /* Elegant background */
+    width: 200px; /* Adjust width for better balance */
+    height: 150px; /* Adjust height for proportionality */
+    text-align: center; /* Center align text */
+    display: flex; /* Use Flexbox for alignment */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    border-radius: 15px; /* Smoother rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    font-family: Arial, sans-serif; /* Use a clean font */
+    font-size: 16px; /* Adjust font size for readability */
+    color: #333; /* Dark text for contrast */
+    gap: 7px;
+
+}
+img{
+    width: 40px;
+    height: 40px;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.time-zone {
+    background-color: antiquewhite; /* Elegant background */
+    width: 200px; /* Adjust width for better balance */
+    height: 150px; /* Adjust height for proportionality */
+    text-align: center; /* Center align text */
+    display: flex; /* Use Flexbox for alignment */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    border-radius: 15px; /* Smoother rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    font-family: Arial, sans-serif; /* Use a clean font */
+    font-size: 16px; /* Adjust font size for readability */
+    color: #333; /* Dark text for contrast */
+    gap: 7px;
+}
+#city-input:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90vw; /* Full width on smaller screens */
+        height: auto; /* Allow height to adjust */
+    }
+    .weather-data, .time-zone {
+        width: 100%;
+        height: auto;
+    }
+}
+
